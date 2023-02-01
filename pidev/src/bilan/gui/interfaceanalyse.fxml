@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="426.0" prefWidth="992.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bilan.gui.InterfaceanalyseController">
+   <children>
+      <JFXButton layoutX="112.0" layoutY="37.0" onAction="#nbpart_stat" prefHeight="190.0" prefWidth="308.0" text="Nombre participants">
+         <graphic>
+            <ImageView fitHeight="127.0" fitWidth="164.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/analyse-surveillance-equipe-personnes-moniteur-du-tableau-bord-rapports-web_115495-203.jpg" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXButton>
+      <JFXButton layoutX="513.0" layoutY="45.0" onAction="#stat_even" prefHeight="199.0" prefWidth="403.0" text="Finance pour evenements">
+         <graphic>
+            <ImageView fitHeight="142.0" fitWidth="226.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/courbe-finance.jpg" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></JFXButton>
+      <JFXButton layoutX="122.0" layoutY="244.0" onAction="#equip_stat" prefHeight="190.0" prefWidth="323.0" text="Statistiques pour equipements">
+         <graphic>
+            <ImageView fitHeight="175.0" fitWidth="161.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/43eba563a3a0337d742ed367a776d1a1.jpg" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font></JFXButton>
+      <JFXButton layoutX="513.0" layoutY="254.0" onAction="#agestatics" prefHeight="156.0" prefWidth="386.0" text="Age statics ">
+         <graphic>
+            <ImageView fitHeight="60.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/loop-email-generation-gap-1500x500.jpg" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

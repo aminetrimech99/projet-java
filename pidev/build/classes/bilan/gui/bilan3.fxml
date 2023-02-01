@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bilan.gui.Bilan3Controller">
+   <children>
+      <ButtonBar layoutX="425.0" layoutY="518.0" prefHeight="46.0" prefWidth="533.0" style="-fx-background-color: gris foncee;">
+         <buttons>
+            <Button mnemonicParsing="false" onAction="#poursuivrecommande" prefHeight="46.0" prefWidth="235.0" style="-fx-background-color: #e8ebe9;" text="Poursuivre les achats" textFill="#f5a607">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#validercommande" prefHeight="52.0" prefWidth="134.0" style="-fx-background-color: #f68b1e;" text="valider les achats" textFill="#f5faf0">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+            </Button>
+         </buttons>
+      </ButtonBar>
+      <Label layoutX="794.0" layoutY="459.0" prefHeight="32.0" prefWidth="70.0" text=" Total :">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="436.0" layoutY="255.0" />
+      <Label layoutX="634.0" layoutY="102.0" text="QUANTITE" />
+      <Label layoutX="769.0" layoutY="102.0" prefHeight="17.0" prefWidth="36.0" text="TYPE" />
+      <Label layoutX="871.0" layoutY="102.0" prefHeight="17.0" prefWidth="89.0" text="SOUS-TOTAL" />
+      <Label layoutX="384.0" layoutY="102.0" prefHeight="17.0" prefWidth="63.0" text="ARTICLE" />
+      <Line endX="995.0" layoutX="136.0" layoutY="128.0" startX="-100.0" />
+      <Line endX="658.0" endY="1.0" layoutX="136.0" layoutY="474.0" startX="-100.0" />
+      <Pane layoutX="380.0" layoutY="13.0" prefHeight="57.0" prefWidth="70.0" />
+      <ScrollPane layoutX="199.0" layoutY="143.0" pannable="true" prefHeight="314.0" prefWidth="797.0">
+         <content>
+            <AnchorPane fx:id="espacepanier" minHeight="0.0" minWidth="0.0" onDragDetected="#supprimerpanier" prefHeight="308.0" prefWidth="790.0">
+               <children>
+                  <Pane fx:id="ProduitPane" layoutX="12.0" layoutY="4.0" prefHeight="102.0" prefWidth="759.0" style="-fx-background-color: #e8ebe9;">
+                     <children>
+                        <Label fx:id="labelNomProduit" layoutX="84.0" layoutY="19.0" prefHeight="25.0" prefWidth="227.0" text="Vendeur : BEAUTY &amp; HOME" textFill="#655b5b">
+                           <font>
+                              <Font name="Century Gothic Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labelDescriptionProduit" layoutX="78.0" layoutY="42.0" prefHeight="49.0" prefWidth="302.0" text="Gel Douche - Secrets de Beauté Lait de Riz - 250 ML">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Spinner fx:id="spinbtnQuantityProduit" layoutX="413.0" layoutY="37.0" prefHeight="17.0" prefWidth="70.0" />
+                        <Label fx:id="labelTypeProduit" layoutX="518.0" layoutY="27.0" prefHeight="48.0" prefWidth="115.0" text="Evenement" textOverrun="CLIP">
+                           <font>
+                              <Font name="Calibri Bold" size="17.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="94.0" fitWidth="79.0" layoutX="5.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../Desktop/3574661319308_lpm_gel_douche_extra_doux_grenade_bio_250ml_face_updated.jpg" />
+                           </image>
+                        </ImageView>
+                        <Line endX="-100.0" endY="97.0" layoutX="617.0" startX="-100.0" stroke="#d3c8c8" />
+                        <Line endX="-100.0" endY="97.0" layoutX="731.0" startX="-100.0" stroke="#d3c8c8" />
+                        <Label fx:id="labelPrixProduit" layoutX="668.0" layoutY="29.0" prefHeight="40.0" prefWidth="70.0" text="20 DT" textFill="#bc190a">
+                           <font>
+                              <Font name="Calibri Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <JFXButton fx:id="btnSupprimerProduit" layoutX="732.0" layoutY="-3.0" onAction="#supprimerproduit" text="X" textFill="RED">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+      <Label layoutX="864.0" layoutY="453.0" prefHeight="40.0" prefWidth="70.0" text="20 DT" textFill="#051554">
+         <font>
+            <Font name="Calibri Bold" size="26.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="-20.0" prefHeight="72.0" prefWidth="1372.0" style="-fx-background-color: black;">
+         <children>
+            <TextArea fx:id="recherche" layoutX="265.0" layoutY="17.0" prefHeight="47.0" prefWidth="586.0" />
+            <JFXButton layoutX="34.0" layoutY="10.0" prefWidth="178.0" ripplerFill="#bf4949" text="Go Rando" textFill="#f3a847">
+               <font>
+                  <Font name="Franklin Gothic Medium" size="28.0" />
+               </font>
+            </JFXButton>
+            <ImageView accessibleRole="BUTTON" fitHeight="40.0" fitWidth="49.0" layoutX="860.0" layoutY="19.0">
+               <image>
+                  <Image url="@../../../../../../Desktop/téléchargé%20(1).png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="36.0" layoutX="1161.0" layoutY="25.0">
+               <image>
+                  <Image url="@../../../../../../Desktop/téléchargé.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="1210.0" layoutY="24.0" prefHeight="17.0" prefWidth="89.0" text="PANIER" textFill="#eb2626">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Pane layoutX="1040.0" layoutY="305.0" prefHeight="40.0" prefWidth="89.0" style="-fx-background-image: #F3A847;" />
+      <Line endX="-92.0" endY="97.0" layoutX="1061.0" layoutY="378.0" startX="81.0" startY="97.0" />
+      <JFXButton layoutX="1143.0" layoutY="92.0" prefHeight="46.0" prefWidth="49.0" style="-fx-background-image: &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;?import javafx.scene.image.Image?&gt;&lt;?import javafx.scene.image.ImageView?&gt;&lt;ImageView fitHeight=&quot;40.0&quot; fitWidth=&quot;49.0&quot; layoutX=&quot;859.0&quot; layoutY=&quot;20.0&quot; xmlns=&quot;http://javafx.com/javafx/8.0.171&quot; xmlns:fx=&quot;http://javafx.com/fxml/1&quot;&gt;   &lt;image&gt;      &lt;Image url=&quot;@../../../../../../Desktop/téléchargé%20(1).png&quot; /&gt;   &lt;/image&gt;&lt;/ImageView&gt;&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;?import javafx.scene.image.Image?&gt;&lt;?import javafx.scene.image.ImageView?&gt;&lt;ImageView fitHeight=&quot;40.0&quot; fitWidth=&quot;49.0&quot; layoutX=&quot;859.0&quot; layoutY=&quot;20.0&quot; xmlns=&quot;http://javafx.com/javafx/8.0.171&quot; xmlns:fx=&quot;http://javafx.com/fxml/1&quot;&gt;   &lt;image&gt;      &lt;Image url=&quot;@../../../../../../Desktop/téléchargé%20(1).png&quot; /&gt;   &lt;/image&gt;&lt;/ImageView&gt;;" text=" " />
+   </children>
+</AnchorPane>

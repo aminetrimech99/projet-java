@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bilan.gui.AgestatController">
+   <children>
+      <PieChart fx:id="piechartage" layoutX="261.0" layoutY="100.0" />
+      <JFXButton fx:id="showagestat" layoutX="58.0" layoutY="59.0" onAction="#ShowAge" prefHeight="83.0" prefWidth="156.0" text="SHOW">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </JFXButton>
+      <Line endX="546.0" layoutX="295.0" layoutY="528.0" startX="-167.0" />
+      <Line endX="727.0" layoutX="159.0" layoutY="538.0" startX="-100.0" />
+      <Line endX="-90.0" endY="422.0" layoutX="904.0" layoutY="77.0" startX="-90.0" startY="-15.0" />
+      <Line endX="668.0" endY="-7.62939453125E-6" layoutX="167.0" layoutY="45.0" startX="-100.0" />
+      <JFXButton layoutX="66.0" layoutY="190.0" onAction="#retour_par_age" prefHeight="75.0" prefWidth="141.0" text="RETOUR" textFill="#e82626">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
